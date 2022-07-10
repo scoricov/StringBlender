@@ -29,7 +29,7 @@ has 'vocabs' => (
 );
 has 'vocab_files' => (
     is => 'rw',
-    isa => 'ArrayRef',
+    isa => 'Maybe[ArrayRef]',
     default => undef,
     trigger => \&load_vocabs,
     predicate => 'has_vocab_files',
